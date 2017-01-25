@@ -14072,6 +14072,20 @@ I think this is pretty good considering that images 3 5 need some sort of object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong> 
+"Student documents the performance of the model when tested on the captured images and compares it to the results of testing on the dataset. " Rubric</p>
+<p>My solution has an accuracy of 40% on 5 images I selected randomly.
+However this same solution has an accuracy of 92.4% on the given test dataset.</p>
+<p>I think this drop in perfomance is because images 3 5 need some sort of object detection first(IMO) and image 4 has a shadow in it. None of it has been taken into consideration in my solution.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-8">Question 8<a class="anchor-link" href="#Question-8">&#182;</a></h3><p><em>Use the model's softmax probabilities to visualize the <strong>certainty</strong> of its predictions, <a href="https://www.tensorflow.org/versions/r0.12/api_docs/python/nn.html#top_k"><code>tf.nn.top_k</code></a> could prove helpful here. Which predictions is the model certain of? Uncertain? If the model was incorrect in its initial prediction, does the correct prediction appear in the top k? (k should be 5 at most)</em></p>
 <p><code>tf.nn.top_k</code> will return the values and indices (class ids) of the top k predictions. So if k=3, for each sign, it'll return the 3 largest probabilities (out of a possible 43) and the correspoding class ids.</p>
 <p>Take this numpy array as an example:</p>
